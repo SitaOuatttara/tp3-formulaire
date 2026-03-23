@@ -1,11 +1,160 @@
 <!doctype html>
 <html lang="fr-CA">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Commander une brochure gratuite</title>
-    </head>
-    <body>
-        <!-- Votre code HTML commence ici -->
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Commander une brochure gratuite</title>
+</head>
+<body>
+
+<header>
+    <h1 class="titre">Commander une <span>brochure</span> gratuite</h1>
+</header>
+<main>
+<form id="formulaire" action="#" method="post">
+<fieldset>
+<legend class="legend">Format de la brochure</legend>
+<img src="icon-format-brochure.svg" alt="icon">
+
+<div class="ctnValidation">
+    <input type="radio" id="imprime" name="format" value="imprime" required>
+    <label for="imprime">
+        <img src="icon-file-print.svg" alt="Format imprimé">
+        Imprimé
+    </label>
+</div>
+
+<div class="ctnValidation">
+    <input type="radio" id="pdf" name="format" value="pdf">
+    <label for="pdf">
+        <img src="icon-file-pdf.svg" alt="Format PDF">
+        PDF
+    </label>
+</div>
+
+<div class="ctnValidation">
+    <input type="radio" id="epub" name="format" value="epub">
+    <label for="epub">
+        <img src="icon-file-epub.svg" alt="Format EPUB">
+        EPUB
+    </label>
+</div>
+
+<p class="erreur"></p>
+
+</fieldset>
+
+
+<fieldset>
+<legend  class="legend">Informations de contact</legend>
+<img src="icon-contact.svg" alt="icon">
+
+<div class="champ ctnValidation">
+    <label for="prenom">Prénom</label>
+    <input type="text" id="prenom" name="prenom"
+        required
+        pattern="^[A-Za-zÀ-ÿ' -]+$"
+        title="Lettres seulement">
+    <p class="erreur"></p>
+</div>
+
+<div class="champ ctnValidation">
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom"
+        required
+        pattern="^[A-Za-zÀ-ÿ' -]+$"
+        title="Lettres seulement">
+    <p class="erreur"></p>
+</div>
+
+<div class="champ ctnValidation">
+    <label for="courriel">Courriel</label>
+    <input type="email" id="courriel" name="courriel" required>
+    <p class="erreur"></p>
+</div>
+
+<div class="champ ctnValidation">
+    <label>Téléphone</label>
+
+    <input type="text" name="indicatif"
+        placeholder="514"
+        required
+        pattern="[0-9]{3}"
+        title="3 chiffres">
+
+    <input type="text" name="telephone"
+        placeholder="5550123"
+        required
+        pattern="[0-9]{7}"
+        title="7 chiffres">
+
+    <p class="erreur"></p>
+</div>
+
+</fieldset>
+
+
+
+<fieldset>
+<legend  class="legend">Informations postales</legend>
+<img src="icon-postal.svg" alt="icon">
+
+<div class="champ ctnValidation">
+    <label for="adresse">Adresse</label>
+    <input type="text" id="adresse" name="adresse" required>
+    <p class="erreur"></p>
+</div>
+
+<div class="champ ctnValidation">
+    <label for="pays">Pays</label>
+    <select id="pays" name="pays" required>
+        <option value="">-- Sélectionner --</option>
+        <option value="CA">Canada</option>
+        <option value="US">États-Unis</option>
+    </select>
+    <p class="erreur"></p>
+</div>
+
+<div class="champ ctnValidation">
+    <label for="province">Province ou État</label>
+    <select id="province" name="province" required>
+        <option value="">-- Sélectionner --</option>
+        <option>Québec</option>
+        <option>Ontario</option>
+        <option>Alberta</option>
+        <option>New York</option>
+        <option>California</option>
+    </select>
+    <p class="erreur"></p>
+</div>
+
+<div class="champ ctnValidation">
+    <label for="codepostal">Code postal</label>
+    <input type="text" id="codepostal" name="codepostal"
+        required
+        pattern="(^[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d$)|(^\d{5}$)">
+    <p class="erreur"></p>
+</div>
+
+</fieldset>
+
+
+
+<div>
+    <input type="checkbox" id="infolettre" name="infolettre">
+    <label for="infolettre">
+        Je désire recevoir des informations mensuelles par courriel
+    </label>
+</div>
+
+<button type="submit">Commander</button>
+
+</form>
+
+</main>
+
+<footer>
+    <p>2025 Publication gratuite</p>
+</footer>
+
+</body>
 </html>

@@ -26,9 +26,9 @@
 /* ------- Variables ------- */
 :root {
     /* Couleurs */
-    --couleur-primaire: ?;
-    --couleur-secondaire: ?;
-    --couleur-tertiaire: ?;
+    --couleur-primaire: #007bff;
+    --couleur-secondaire: #28a745;
+    --couleur-tertiaire: #6c757d;
 }
 
 /* ------- Styles de base ------- */
@@ -53,6 +53,21 @@ html {
 /*** Fluidifier les images ***/
 img {
     max-width: 100%;
+}
+
+/* ------- Header ------- */
+.site_header {
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.site_header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 /* ------- Accessibilité ------- */
